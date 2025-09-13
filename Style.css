@@ -1,0 +1,157 @@
+
+* { box-sizing: border-box; }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+nav ul li {
+    margin: 0;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 10px;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+
+.banner {
+    width: 100%;
+    overflow: hidden;
+    background-color: #ccc;
+    display: block;
+}
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    
+    max-height: 420px;
+}
+
+
+.product-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+
+.product-item {
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 12px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+
+
+@media (min-width: 600px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 24px;
+    }
+
+    .product-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    
+    .product-item {
+        width: calc(50% - 10px); 
+    }
+}
+
+
+@media (min-width: 900px) {
+    header h1 { font-size: 1.5rem; }
+
+    .banner img {
+        max-height: 480px;
+    }
+
+    .product-item {
+        width: calc(33.333% - 13.33px); /* 3 colunas */
+    }
+
+    nav ul { gap: 18px; }
+}
+
+
+@media (min-width: 1200px) {
+    
+    body {
+        display: flex;
+        justify-content: center;
+    }
+    .product-grid {
+        max-width: 1200px;
+        width: 100%;
+    }
+    .banner {
+        max-width: 1200px;
+        width: 100%;
+    }
+}
